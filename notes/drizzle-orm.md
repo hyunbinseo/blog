@@ -1,5 +1,15 @@
 # Drizzle ORM
 
+## Return Type of Prepared Statements
+
+```typescript
+const prepared = db.select().from(programs).prepare();
+
+const selected = await prepared.execute();
+
+type Selected = Awaited<ReturnType<typeof prepared.execute>>;
+```
+
 ## Relational queries
 
 - [Include relations](https://orm.drizzle.team/docs/rqb#include-relations)
