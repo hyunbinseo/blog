@@ -1,5 +1,12 @@
 {
-	"singleQuote": true,
 	"useTabs": true,
-	"overrides": [{ "files": "*.md", "options": { "useTabs": false } }]
+	"singleQuote": true,
+	"trailingComma": "all",
+	"printWidth": 100,
+	"plugins": ["prettier-plugin-svelte"],
+	"pluginSearchDirs": ["."],
+	"overrides": [
+		{ "files": "*.md", "options": { "useTabs": false } },
+		{ "files": "*.svelte", "options": { "parser": "svelte" } }
+	]
 }
