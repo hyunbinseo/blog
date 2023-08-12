@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+	html,
+	body {
+		/* Disables overscroll bounce effect. */
+		@apply overscroll-y-none scroll-smooth;
+	}
+
+	body {
+		@apply text-gray-900;
+	}
+
+	input[type],
+	button,
+	select {
+		@apply rounded-md py-1.5 shadow-sm;
+	}
+
+	button {
+		@apply px-3 text-sm;
+	}
+
+	select {
+		@apply pl-3 pr-10;
+	}
+
+	input[type],
+	select {
+		@apply border-gray-300 disabled:bg-gray-200 disabled:text-gray-600;
+	}
+
+	input[type] {
+		@apply placeholder:text-gray-400 read-only:bg-gray-200 read-only:text-gray-600;
+	}
+}
