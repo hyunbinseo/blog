@@ -10,6 +10,14 @@ export const disableBodyScroll = (disable: boolean) => {
 ```
 
 ```svelte
+<script lang="ts">
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  const handleDialog = (el: HTMLDialogElement) => ({
+    // e.g. goto() caused the dialog to unmount.
+    destroy: () => disableBodyScroll(false),
+  });
+</script>
+
 <button
   on:click={() => {
     disableBodyScroll(true);
@@ -18,7 +26,7 @@ export const disableBodyScroll = (disable: boolean) => {
 >
   Show Modal
 </button>
-<dialog on:close={() => disableBodyScroll(false)}>
+<dialog use:handleDialog on:close={() => disableBodyScroll(false)}>
   <!-- Dialog Content -->
 </dialog>
 ```
