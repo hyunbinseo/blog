@@ -40,3 +40,5 @@ dialog[open]::backdrop {
   touch-action: none;
 }
 ```
+
+For non-`<dialog>` usage, setting `<body>` to `fixed` and giving a `top` value works. [Reference](https://slog.website/post/16)
