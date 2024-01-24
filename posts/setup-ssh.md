@@ -103,7 +103,7 @@ ssh-add -l
 nano ~/.ssh/authorized_keys
 ```
 
-> **Note**
+> [!NOTE]
 > This can be achieved in the client using `ssh-copy-id username@host`.
 
 ### Disable Password Auth
